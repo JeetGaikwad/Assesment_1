@@ -11,6 +11,9 @@ class Calculator:
     # Modulo of Two numbers
     def mod(self, a, b):
         return a % b
+    # Exponential of Two numbers
+    def exp(self, a, b):
+        return a ** b
     
     
 
@@ -21,4 +24,5 @@ print(calculate.sub(inp1, inp2))
 print(calculate.mul(inp1, inp2))
 print(calculate.div(inp1, inp2))
 print(calculate.mod(inp1, inp2))
+print(calculate.exp(inp1, inp2))
     
