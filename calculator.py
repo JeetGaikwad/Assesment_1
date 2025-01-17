@@ -1,5 +1,5 @@
 class Calculator:
-    # Addition of Two numbers
+    # Subtraction of Two numbers
     def sub(self, a, b):
         return a - b
     
