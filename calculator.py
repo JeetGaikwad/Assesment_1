@@ -1,32 +1,51 @@
 class Calculator:
-    # Addition of Two numbers
-    def add(self, a, b):
-        return a + b
-    # Subtraction of Two numbers
-    def sub(self, a, b):
-        return a - b
-    # Multiplication of Two numbers
-    def mul(self, a, b):
-        return a * b
-    # Division of Two numbers
-    def div(self, a, b):
-        return a / b
-    # Modulo of Two numbers
-    def mod(self, a, b):
-        return a % b
-    # Exponential of Two numbers
-    def exp(self, a, b):
-        return a ** b
-    
-    
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
 
-calculate = Calculator()
-inp1 = int(input("Enter first number: "))
-inp2 = int(input("Enter second number: "))
-print(calculate.sub(inp1, inp2))
-print(calculate.sub(inp1, inp2))
-print(calculate.mul(inp1, inp2))
-print(calculate.div(inp1, inp2))
-print(calculate.mod(inp1, inp2))
-print(calculate.exp(inp1, inp2))
-    
+    # Addition of Two numbers
+    def add(self):
+        return self.a + self.b
+
+    # Subtraction of Two numbers
+    def sub(self):
+        return self.a - self.b
+
+    # Multiplication of Two numbers
+    def mul(self):
+        return self.a * self.b
+
+    # Division of Two numbers
+    def div(self):
+        try:
+            return self.a / self.b
+        except:
+            print("Error: Division by zero is not allowed.")
+
+    # Modulo of Two numbers
+    def mod(self):
+        try:
+            return self.a % self.b
+        except:
+            print("Error: Modulo operation of zero is not allowed.")
+
+    # Exponential of Two numbers
+    def exp(self):
+        return self.a ** self.b
+
+
+try:
+    first_number = float(input("Enter first number: "))
+    second_number = float(input("Enter second number: "))
+
+    calculator = Calculator(first_number, second_number)
+
+    print("\nAddition: ", calculator.add())
+    print("Subtraction: ", calculator.sub())
+    print("Multiplication: ", calculator.mul())
+    print("Division: ", calculator.div())
+    print("Modulo: ", calculator.mod())
+    print("Exponential: ", calculator.exp(), "\n")
+
+except ValueError:
+    print("Invalid input. Please Enter valid number")
