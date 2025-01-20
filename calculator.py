@@ -49,10 +49,3 @@ try:
 
 except ValueError:
     print("Invalid input. Please Enter valid number")
-try:
-    first_number = int(input("Enter first number: "))
-    second_number = int(input("Enter second number: "))
-    calculator = Calculator(first_number, second_number)    
-    print(calculator.add())
-except ValueError:
-    print("Invalid input. Please Enter valid number")
