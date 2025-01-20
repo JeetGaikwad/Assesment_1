@@ -1,12 +1,17 @@
 class Calculator:
-    # Exponential of Two numbers
-    def exp(self, a, b):
-        return a ** b
-    
-    
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
 
-calculate = Calculator()
-inp1 = int(input("Enter first number: "))
-inp2 = int(input("Enter second number: "))
-print(calculate.exp(inp1, inp2))
-    
+    # Exponential of Two numbers
+    def exp(self):
+        return self.a ** self.b
+
+
+try:
+    first_number = int(input("Enter first number: "))
+    second_number = int(input("Enter second number: "))
+    calculate = Calculator(first_number, second_number)
+    print("\nExponential: ", calculate.exp())
+except ValueError:
+    print("Invalid input. Please enter valid number")
