@@ -1,12 +1,17 @@
 class Calculator:
-    # Multiplication of Two numbers
-    def mul(self, a, b):
-        return a * b
-    
-    
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
 
-calculate = Calculator()
-inp1 = int(input("Enter first number: "))
-inp2 = int(input("Enter second number: "))
-print(calculate.mul(inp1, inp2))
-    
+    # Multiplication of Two numbers
+    def mul(self):
+        return self.a * self.b
+
+
+try:
+    first_number = int(input("Enter first number: "))
+    second_number = int(input("Enter second number: "))
+    calculate = Calculator(first_number, second_number)
+    print(calculate.mul())
+except ValueError:
+    print("Invalid input. Please enter valid number")
