@@ -3,6 +3,10 @@ class Calculator:
         self.a = a
         self.b = b
 
+    # Exponential of Two numbers
+    def exp(self):
+        return self.a ** self.b
+
     # Division of Two numbers
     def div(self):
         try:
@@ -31,5 +35,6 @@ try:
     print("Addition: ", calculator.add())
     print("Multiplication: ", calculator.mul())
     print("Division: ", calculator.div())
+    print("Exponential: ", calculator.div())
 except ValueError:
     print("Invalid input. Please Enter valid number")
