@@ -10,11 +10,39 @@ class Calculator:
         except ZeroDivisionError:
             print("Error: Modulo operation with zero is not allowed.")
 
+    # Exponential of Two numbers
+    def exp(self):
+        return self.a ** self.b
+
+    # Division of Two numbers
+    def div(self):
+        try:
+            return self.a / self.b
+        except ZeroDivisionError:
+            print("Error: Division by zero is not allowed")
+
+    # Multiplication of Two numbers
+    def mul(self):
+        return self.a * self.b
+
+    # Addition of Two numbers
+    def add(self):
+        return self.a + self.b
+
+    # Subtraction of Two numbers
+    def sub(self):
+        return self.a - self.b
+
 
 try:
     first_number = int(input("Enter first number: "))
     second_number = int(input("Enter second number: "))
-    calculate = Calculator(first_number, second_number)
-    print(calculate.mod())
-except:
-    print("Invalid input. Please enter valid number.")
+    calculator = Calculator(first_number, second_number)
+    print("\nSubtraction: ", calculator.sub())
+    print("Addition: ", calculator.add())
+    print("Multiplication: ", calculator.mul())
+    print("Division: ", calculator.div())
+    print("Exponential: ", calculator.div())
+    print("Modulo: ", calculator.mod())
+except ValueError:
+    print("Invalid input. Please Enter valid number")
