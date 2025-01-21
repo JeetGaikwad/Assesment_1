@@ -7,11 +7,23 @@ class Calculator:
     def mul(self):
         return self.a * self.b
 
+    # Addition of Two numbers
+    def add(self):
+        return self.a + self.b
+
+    # Subtraction of Two numbers
+    def sub(self):
+        return self.a - self.b
+
 
 try:
     first_number = int(input("Enter first number: "))
     second_number = int(input("Enter second number: "))
-    calculate = Calculator(first_number, second_number)
-    print(calculate.mul())
+    calculator = Calculator(first_number, second_number)
+    print("\nSubtraction: ", calculator.sub())
+    print("Addition: ", calculator.add())
+    print("Multiplication: ", calculator.mul())
 except ValueError:
     print("Invalid input. Please enter valid number")
+except ValueError:
+    print("Invalid input. Please Enter valid number")
